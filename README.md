@@ -7,7 +7,7 @@ Search all compound names found in the data file on pubchem and cactus and obtai
 
 ## W01_Data_BRENDA_Prep.py
 Process the data and output three different files for each dataset.
-All the outputs are in [./X_DataProcessing/X00_enzyme_datasets_processed/]([https://duckduckgo.com](https://github.com/Zhiqing-Xu/protein_kinetics_data_scrapping/tree/main/X_DataProcessing/X00_enzyme_datasets_processed)).
+All the outputs are in [./X_DataProcessing/X00_enzyme_datasets_processed/]([https://github.com/Zhiqing-Xu/protein_kinetics_data_scrapping/tree/main/X_DataProcessing/X00_enzyme_datasets_processed]).
 
 ### Output #1: _wi_unip_avg_val_screened.csv
 > smallest dataset, most safe and confident\
