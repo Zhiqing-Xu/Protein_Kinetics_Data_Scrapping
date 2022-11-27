@@ -2,7 +2,7 @@
 
 This repository contains raw data of protein kinetics (Ki, kcat, KM and kcat/KM) downloaded from BRENDA as well as the entire process of cleaning the data for compound protein interaction learning.
 
-## Data Processing
+## Data Processing:
 ### W00_Data_BRENDA_cmpd_smiles_dict.py 
 Search all compound names found in the data file on pubchem and cactus and obtain two dictionaries of compound -> smiles.
 
