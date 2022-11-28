@@ -23,7 +23,7 @@ All the outputs are in [./X_DataProcessing/X00_enzyme_datasets_processed/](https
 (2) Screen SD < 1.0;\
 (3) Combine the processed wo_unip and wi_unip (in Output #1).
 
-### Output #3: _wi_wo_unip_avg_val_screened_0.csv
+### Output #3: _wi_wo_unip_avg_val_screened_X.csv
 > include some data via pan-genomic approach, strictly screen the dataset to ensure reliability\
 (1) combine wi_unip (known sequences) and wo_unip (assigned sequences);\
 (2) groupby org, EC & cmpd;\
