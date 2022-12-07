@@ -107,11 +107,11 @@ def isfloat(num):
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$# 
 # Input Arguments
 
-data_folder_name    = ["Ki_BRENDA"        , "KM_3_BRENDA"      , "kcat_BRENDA"        , "kcat_KM_BRENDA"        ][2]
-data_file_name      = ["brenda_Ki_raw.csv", "brenda_KM_raw.csv", "brenda_kcat_raw.csv", "brenda_kcat_KM_raw.csv"][2]
-output_file_name    = ["Ki_BRENDA.csv"    , "KM_BRENDA.csv"    , "kcat_BRENDA.csv"    , "kcat_KM_BRENDA.csv"    ][2]
-data_name           = ["Ki"               , "Km"               , "kcat"               , "kcat_KM"               ][2]
-data_name_0         = ["max_Ki"           , "max_Km"           , "max_kcat"           , "kcat_KM_0"             ][2]
+data_folder_name    = ["Ki_BRENDA"        , "KM_3_BRENDA"      , "kcat_BRENDA"        , "kcat_KM_BRENDA"        ][0]
+data_file_name      = ["brenda_Ki_raw.csv", "brenda_KM_raw.csv", "brenda_kcat_raw.csv", "brenda_kcat_KM_raw.csv"][0]
+output_file_name    = ["Ki_BRENDA.csv"    , "KM_BRENDA.csv"    , "kcat_BRENDA.csv"    , "kcat_KM_BRENDA.csv"    ][0]
+data_name           = ["Ki"               , "Km"               , "kcat"               , "kcat_KM"               ][0]
+data_name_0         = ["max_Ki"           , "max_Km"           , "max_kcat"           , "kcat_KM_0"             ][0]
 
 data_folder      = Path("X_DataProcessing/X00_enzyme_datasets/" + data_folder_name)
 data_file        = data_file_name
