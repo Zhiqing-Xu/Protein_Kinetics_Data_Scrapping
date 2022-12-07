@@ -11,11 +11,10 @@ Process the data and output three different files for each dataset.
 All the outputs are in [./X_DataProcessing/X00_enzyme_datasets_processed/](https://github.com/Zhiqing-Xu/protein_kinetics_data_scrapping/tree/main/X_DataProcessing/X00_enzyme_datasets_processed).
 
 ## Idea of Pan-Genomic Approach explained.
-> smallest dataset, most safe and confident\
-Around 60% of kinetic parameters raw data extracted from BRENDA does NOT have UniProt IDs.\
+>Around 60% of kinetic parameters raw data extracted from BRENDA does NOT have UniProt IDs.\
 But details of associated organism and enzyme commission number are provided.\
-KINMOD has studied the relations between sequences, organisms and EC numbers and has filled the gap.\
-Therefore, we assign a sequence to those datapoint without a UniProt ID, on the basis of KINMOD. 
+KINMOD database has studied the relations between sequences, organisms and EC numbers and has filled the gap.\
+Therefore, we assign a sequence to each of those datapoint without a UniProt ID, according to organisms and EC numbers.
 
 
 ## Outputs: 
