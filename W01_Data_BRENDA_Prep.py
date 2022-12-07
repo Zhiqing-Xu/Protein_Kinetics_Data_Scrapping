@@ -106,17 +106,22 @@ def isfloat(num):
 #   `Ybmmd9'  db     .JMML..JML.    YM  .JMML.        `bmmmmd"'     .JMML.    P"Ybmmd"                                                                 #
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$# 
 # Input Arguments
-data_folder_name    = ["Ki_BRENDA"        , "KM_3_BRENDA"      , "kcat_BRENDA"        , "kcat_KM_BRENDA"        ][3]
-data_file_name      = ["brenda_Ki_raw.csv", "brenda_KM_raw.csv", "brenda_kcat_raw.csv", "brenda_kcat_KM_raw.csv"][3]
-output_file_name    = ["Ki_BRENDA.csv"    , "KM_BRENDA.csv"    , "kcat_BRENDA.csv"    , "kcat_KM_BRENDA.csv"    ][3]
-data_name           = ["Ki"               , "Km"               , "kcat"               , "kcat_KM"               ][3]
-data_name_0         = ["max_Ki"           , "max_Km"           , "max_kcat"           , "kcat_KM_0"             ][3]
+
+data_folder_name    = ["Ki_BRENDA"        , "KM_3_BRENDA"      , "kcat_BRENDA"        , "kcat_KM_BRENDA"        ][2]
+data_file_name      = ["brenda_Ki_raw.csv", "brenda_KM_raw.csv", "brenda_kcat_raw.csv", "brenda_kcat_KM_raw.csv"][2]
+output_file_name    = ["Ki_BRENDA.csv"    , "KM_BRENDA.csv"    , "kcat_BRENDA.csv"    , "kcat_KM_BRENDA.csv"    ][2]
+data_name           = ["Ki"               , "Km"               , "kcat"               , "kcat_KM"               ][2]
+data_name_0         = ["max_Ki"           , "max_Km"           , "max_kcat"           , "kcat_KM_0"             ][2]
 
 data_folder      = Path("X_DataProcessing/X00_enzyme_datasets/" + data_folder_name)
 data_file        = data_file_name
 
 output_folder    = Path("X_DataProcessing/X00_enzyme_datasets_processed/")
 output_file      = output_file_name
+
+output_1_tail    = '_core_unip_only.csv'
+output_2_tail    = '_scrnd_all.csv'
+output_3_tail    = '_fine_scrnd_all.csv'
 
 if data_name in ["Ki", "Km", "kcat", ]:
     val_SD_threshold = 1
@@ -833,7 +838,8 @@ print("\n\n_wi_seqs_avg_val_screened, len(uniq_pair_list): ", len(uniq_pair_list
 data_wi_seqs_avg_df_screened.reset_index(inplace=True)
 data_wi_seqs_avg_df_screened = data_wi_seqs_avg_df_screened[["smiles", "Sequence", data_name]]
 data_wi_seqs_avg_df_screened.rename(columns={'smiles': "CMPD_SMILES", "Sequence": "SEQ"}, inplace=True)
-data_wi_seqs_avg_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_unip_avg_val_screened.csv'))
+#data_wi_seqs_avg_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_unip_avg_val_screened.csv'))
+data_wi_seqs_avg_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + output_1_tail))
 del data_wi_seqs_avg_df_screened
 
 
@@ -891,6 +897,7 @@ print("\n\n_wi_seqs_avg_val_screened, len(uniq_pair_list): ", len(uniq_pair_list
 data_wi_seqs_avg_df_screened.reset_index(inplace=True)
 data_wi_seqs_avg_df_screened = data_wi_seqs_avg_df_screened[["smiles", "Sequence", data_name]]
 data_wi_seqs_avg_df_screened.rename(columns={'smiles': "CMPD_SMILES", "Sequence": "SEQ"}, inplace=True)
+# No need to output.
 #data_wi_seqs_avg_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_unip_avg_val_screened_2.csv'))
 
 
@@ -1210,8 +1217,8 @@ data_all_seqs_df_screened = data_all_seqs_df_screened[["CMPD_SMILES", "SEQ", dat
 
 
 # Output.
-data_all_seqs_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_wo_unip_avg_val_screened_0.csv'))
-
+#data_all_seqs_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_wo_unip_avg_val_screened_0.csv'))
+data_all_seqs_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + output_2_tail))
 
 
 
@@ -1267,8 +1274,8 @@ data_all_seqs_combined_avg_df_screened_X.reset_index(inplace=True)
 data_all_seqs_combined_avg_df_screened_X = data_all_seqs_combined_avg_df_screened_X[["CMPD_SMILES", "SEQ", data_name]]
 
 # Output.
-data_all_seqs_combined_avg_df_screened_X.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_wo_unip_avg_val_screened_X.csv'))
-
+#data_all_seqs_combined_avg_df_screened_X.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_wo_unip_avg_val_screened_X.csv'))
+data_all_seqs_combined_avg_df_screened_X.to_csv(output_folder / ("BRENDA_" + data_name + output_3_tail))
 
 print("Done!")
 
