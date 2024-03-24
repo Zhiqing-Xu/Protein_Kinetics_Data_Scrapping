@@ -664,6 +664,11 @@ cmpd_smls_dict_df = cmpd_smls_dict_df.drop_duplicates(['CMPD'], keep='first')
 
 
 
+
+
+
+
+
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$# 
 #         ,AM              .g8""8q.   `7MMF'   `7MF'MMP""MM""YMM `7MM"""Mq. `7MMF'   `7MF'MMP""MM""YMM         ,M' dP         
 #        AVMM            .dP'    `YM.   MM       M  P'   MM   `7   MM   `MM.  MM       M  P'   MM   `7         dP .M'    __,  
@@ -899,6 +904,8 @@ data_wi_seqs_avg_df_screened = data_wi_seqs_avg_df_screened[["smiles", "Sequence
 data_wi_seqs_avg_df_screened.rename(columns={'smiles': "CMPD_SMILES", "Sequence": "SEQ"}, inplace=True)
 # No need to output.
 #data_wi_seqs_avg_df_screened.to_csv(output_folder / ("BRENDA_" + data_name + '_wi_unip_avg_val_screened_2.csv'))
+
+
 
 
 
